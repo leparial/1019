@@ -1,0 +1,51 @@
+ #Sample INI File
+
+"General"
+name = "John Doe"
+age = 30
+email = "johndoe@example.com"
+
+"Settings"
+theme = "dark"
+language = "English"
+auto_save = "true"
+
+"Database"
+host = "localhost"
+port = 3306
+username = "myuser"
+password = "mypassword"
+
+#Counting the numbers of letters [a-z, A-Z]
+import re
+#General
+Name = len(re.findall('[a-zA-z]', name))
+Email = len(re.findall('[a-zA-z]', email))
+
+#Settings
+Theme = len(re.findall('[a-zA-z]', theme))
+Language = len(re.findall('[a-zA-z]', language))
+Auto_save = len(re.findall('[a-zA-z]', auto_save))
+
+#Database
+Host = len(re.findall('[a-zA-z]', host))
+Username = len(re.findall('[a-zA-z]', username))
+Password = len(re.findall('[a-zA-z]', password))
+
+
+#Total number of Letters
+total = (Name + Email + Theme + Language + Auto_save + Host + Username + Password)
+print("Count of Letters:", total)
+
+#Total instances of numbers
+instan_num = ['age',3,0, 'port',3,3,0,6]
+count_num = []
+for i in instan_num:
+    if(type(i) is int):
+        count_num.append(i)
+x = len(count_num)
+print("The instances of numbers are: " + str(x))        
+
+
+
+
